@@ -1,0 +1,17 @@
+<ion-view view-title="Настройка">
+  <ion-content class="">
+    <button ng-click="search()" class="button button-full button-light" >Поисе BT </button>
+    <label class="item item-input item-select">
+        <div class="input-label">
+          Устройства:
+        </div>
+        <select ng-change="resetForm()" ng-model="$parent.selected" ng-options="device.name for device in BTdevices track by device.id"></select>
+      </label>
+      <button ng-click="connect()" class="button button-full button-light" >Соединится </button>
+      <button ng-click="connectNot()" class="button button-full button-light" >Соединится не безопасно </button>
+      <button ng-click="disconnect()" class="button button-full button-light" >Отсоединится</button>
+
+      {{$parent.BTdevices}}
+
+  </ion-content>
+</ion-view>
